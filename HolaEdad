@@ -21,7 +21,7 @@
 using namespace std; 
 
 void main()
-{
+{cout<<"Ingrese su Edad:";
 	int edad;
 	cin>> edad;
 	cout << "Su edad es: ";
