@@ -1,0 +1,30 @@
+// HolaMundo.cpp : Defines the entry point for the console application.
+// Nombre: Natalia Callau Rodriguez
+// Fecha: 22 de Agosto del 2014
+// Nombre del Programa:
+
+/* Otra forma de comentario
+
+
+
+
+
+*/
+
+// Empiezan las librerias
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+// Terminan librerias
+
+using namespace std; 
+
+void main()
+{
+	int edad;
+	cin>> edad;
+	cout << "Su edad es: ";
+	cout << edad;
+	getch(); // Es para que se detenga la pantalla hasta presionar enter
+}
