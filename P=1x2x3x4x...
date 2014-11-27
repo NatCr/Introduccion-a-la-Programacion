@@ -1,0 +1,23 @@
+// P=1x2x3x4x...xn.cpp : Defines the entry point for the console application.
+// Natalia Callau Rodriguez
+//ANEXO:https://gist.github.com/NatCr/763e060ee1716ac3713f
+ 
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+using namespace std;
+void main()
+{
+int n,p,i;
+do
+{cout<<"Ingrese el numero de terminos que desea: ";
+cin>>n;}
+while(n<=0);
+i=1;
+p=1;
+while(i<=n)
+{p=p*i;
+i=i+1;}
+cout<<"El producto es: "<<p;
+getch();
+} 
