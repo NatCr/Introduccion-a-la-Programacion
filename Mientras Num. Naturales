@@ -1,0 +1,25 @@
+// MIENTRAS N naturales.cpp : Defines the entry point for the console application.
+//NOMBRE: Natalia Callau Rodriguez
+//Z6
+//18Sept14
+//MIENTRAS
+ 
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+ 
+using namespace std;
+ 
+void main()
+{
+int N,I;
+cout<<"Ingrese N:\n";
+cin>>N;
+I=1;
+while(I<=N)
+{cout<<I<<"\n";
+I++;
+}
+getch();
+}
+  
