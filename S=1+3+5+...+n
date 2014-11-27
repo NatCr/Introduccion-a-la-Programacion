@@ -1,0 +1,21 @@
+// S=1+3+5+...+n.cpp : Defines the entry point for the console application.
+// Natalia Callau Rodriguez
+//ANEXO:https://gist.github.com/NatCr/763e060ee1716ac3713f
+ 
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+using namespace std;
+void main()
+{
+int n,i,suma;
+cout<<"Cantidad hasta la que se desea sumar: ";
+cin>>n;
+suma=0;
+i=1;
+while(i<n)
+{suma=suma+i;
+i=i+2;}
+cout<<"La suma es: "<<suma;
+getch();
+} 
