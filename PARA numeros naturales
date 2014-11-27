@@ -1,0 +1,22 @@
+// PARA programa numeros naturales.cpp : Defines the entry point for the console application.
+//NOMBRE: Natalia Callau Rodriguez
+//Z6
+//18Sept14
+//PARA
+//ANEXOS:https://gist.github.com/NatCr/b81881ecabed17760b37
+ 
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+ 
+using namespace std;
+ 
+void main()
+{
+int N,I;
+cout<<"Ingrese N:\n";
+cin>>N;
+for(I=1;I<=N;I++)
+cout<<I<<"\n";
+getch();
+} 
