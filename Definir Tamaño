@@ -1,0 +1,83 @@
+// definir tamanho.cpp : Defines the entry point for the console application.
+// Hacer un programa para cargar en un vector las edades.
+// Debe validar 1<x<150
+// Debe clasificar de forma DESCENDENTE.
+// Mostrar el vector antes y despues de ser clasificado.
+
+//ANEXO:https://gist.github.com/NatCr/417735fb9701940312fb
+ 
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+ 
+#define TAM 100
+ 
+using namespace std;
+ 
+void leer_vector (int edad[], int n);
+void mostrar_vector (int edad[], int n);
+void ordenar_vector (int edad[], int n);
+bool validar_rango (int e, int ri, int rf);
+ 
+void main()
+ 
+{ int n,ed[TAM];
+do
+{
+cout<<"Ingrese el numero de edades: ";
+cin>>n;
+}
+while((n>100)||(n<0));
+leer_vector (ed,n);
+cout<<"\nEdades sin clasificar\n";
+mostrar_vector (ed,n);
+ordenar_vector (ed,n);
+cout<<"\nEdades clasificadas\n";
+mostrar_vector (ed,n);
+getch();
+ 
+}
+ 
+void leer_vector (int edad[], int n)
+{
+bool flag;
+cout<<"Ingrese las edades:\n ";
+for(int i=0;i<n;i++)
+{
+do
+{ cout<<"["<<i<<"]=";
+cin>>edad[i];
+flag=validar_rango(edad[i],1,150);
+}
+while(!flag);
+}
+}
+ 
+ 
+void mostrar_vector (int edad[], int n)
+{
+for(int i=0;i<n;i++)
+cout<<"["<<i<<"]= "<<edad[i]<<"\n";
+}
+ 
+ 
+bool validar_rango (int e, int ri, int rf)
+{
+if((e>=ri)&&(e<=rf))
+return true;
+else
+return false;
+}
+ 
+void ordenar_vector (int edad[], int n)
+{
+int aux;
+for(int i=0;i<n;i++)
+for(int j=i+1;j<n;j++)
+if (edad[i]>edad[j])
+{
+aux=edad[i];
+edad[i]=edad[j];
+edad[j]=aux;
+}
+} 
