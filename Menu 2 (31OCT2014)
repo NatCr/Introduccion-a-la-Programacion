@@ -1,0 +1,85 @@
+// Menu 30OCT2014.cpp : Defines the entry point for the console application.
+// NATALIA CALLAU RODRIGUEZ
+//ORDEN: Elaborar un programa que utilice funciones para mostrar el siguiente menu y llame a cada opcion como funcion
+//1.calcular el area del triangulo
+//2.calcular el area de la circunferencia
+//3.calcular la serie= 2+4+6+8...
+//4.Salir
+
+//ANEXO:https://gist.github.com/NatCr/95e034bae03af7e38163
+ 
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+#include "stdlib.h"
+#include "math.h"
+ 
+using namespace std;
+ 
+float triangulo (float base, float altura);
+float circunferencia (float radio);
+int serie (int n);
+ 
+void main()
+ 
+{int opcion,n,suma,i;
+float b,h,r,AT,AC;
+do
+{
+cout<<"1.-Calculo del area del triangulo"<<endl;
+cout<<"2.-Calculo del area de la circunferencia"<<endl;
+cout<<"3.-Calculo de la serie"<<endl;
+cout<<"4.-Salir"<<endl;
+cout<<"Ingrese una opcion:";
+cin>>opcion;
+switch(opcion)
+{ case 1:cout<<"Calculo del area del triangulo"<<endl;
+cout<<"Ingrese la base: ";
+cin>>b;
+cout<<"Ingrese la altura: ";
+cin>>h;
+AT=triangulo(b,h);
+cout<<"El area del tringulo es: "<<AT;
+break;
+ 
+case 2:cout<<"Calculo del area de la circunferencia"<<endl;
+cout<<"ingrese el radio: ";
+cin>>r;
+AC=circunferencia(r);
+cout<<"El area de la circunferencia es: "<<AC;
+break;
+ 
+case 3:cout<<"Serie"<<endl;
+cout<<"Ingese n";
+cin>>n;
+suma=serie(n); //Es la llamada de la funcion serie
+cout<<"La suma es: "<<suma;
+break;
+ 
+case 4:cout<<"Salir";
+break;
+default:cout<<"ERROR\n";
+}
+getch();
+system("cls");
+}
+while(opcion!=4);
+getch();
+}
+ 
+float triangulo (float base, float altura)
+{ float valor;
+valor=(base*altura)/2;
+return valor;
+}
+float circunferencia (float radio)
+{ float circ;
+circ=3.1415*pow(radio,2);
+return circ;
+}
+int serie (int n)
+{ int ser,i;
+for(i=2;i<=n;i=i+2)
+ser=ser+i;
+return ser;
+} 
