@@ -1,0 +1,51 @@
+// vector cantidad precio.cpp : Defines the entry point for the console application.
+// Natalia Callau Rodriguez
+//ANEXO: https://gist.github.com/NatCr/8a0cf414f39e79fe8003
+ 
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+ 
+#define TAM 100
+using namespace std;
+ 
+void leer_vec(int vec[], int n);
+void mostrar_vec(int vec[],int n);
+void total_vec(int vec[],int n);
+ 
+void main ()
+{
+int v[TAM],a;
+do
+{
+cout<<"Ingrese el numero de clientes y porteriormente el numero de bombones que compraron en orden: ";
+cin>>a;
+}while(a>TAM || a<0);
+leer_vec(v,a);
+total_vec(v,a);
+mostrar_vec(v,a);
+getch();
+}
+ 
+void leer_vec(int vec[], int n)
+{
+int i;
+for(i=1;i<=n;i++)
+{cout<<"["<<i<<"] = ";
+cin>>vec[i];}
+}
+void mostrar_vec(int vec[],int n)
+{
+int i;
+for(i=1;i<=n;i++)
+{cout<<"["<<i<<"]: ";
+cout<<"el total a pagar es :";
+cout<<vec[i]<<endl;
+}}
+void total_vec(int vec[],int n)
+{
+int i,precio;
+precio=2;
+for(i=1;i<=n;i++)
+vec[i] = precio * vec[i];
+} 
