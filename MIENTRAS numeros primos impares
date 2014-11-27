@@ -1,0 +1,20 @@
+// MIENTRAS numeros primos impares.cpp : Defines the entry point for the console application.
+// ANEXO: https://gist.github.com/NatCr/b81881ecabed17760b37
+ 
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+ 
+using namespace std;
+ 
+void main()
+{
+int I,N;
+cout<<"Ingrese N\n";
+cin>>N;
+I=1;
+while(I<=N)
+{cout<<I<<"\n";
+I=I+2;}
+getch();
+} 
