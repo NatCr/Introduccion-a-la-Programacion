@@ -1,0 +1,93 @@
+// MENU.cpp : Defines the entry point for the console application.
+//PRIMER INTENTO :)
+//Natalia Callau Rodriguez
+//ANEXO: https://gist.github.com/NatCr/674fa93ba963223609bb
+ 
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+#include "math.h"
+#include "stdlib.h"
+using namespace std;
+void main()
+{
+int opcion, n;
+float a, b, c, pi, x1, x2, y, r, area;
+do
+{
+cout << "\t MENU \n\n";
+cout << "1. Par\n";
+cout << "2. Impar\n";
+cout << "3. Ecuacion Cuadratica\n";
+cout << "4. Valor Absoluto\n";
+cout << "5. Area de una Circunferencia\n";
+cout << "0. Salir\n\n";
+cout << "Escoja una Opcion: ";
+cin >> opcion;
+cout << "\n";
+switch (opcion)
+{
+case 1:cout << "Par\n";
+cout << "Ingrese un numero: ";
+cin >> n;
+if (n % 2 == 0)
+cout << "El numero es par.";
+else
+cout << "El numero no es par.";
+_getch();
+break;
+case 2:cout << "Impar\n";
+cout << "Ingrese su numero: ";
+cin >> n;
+if (n % 2 == 0)
+cout << "El numero no es Impar.";
+else
+cout << "El numero es Impar.";
+_getch();
+break;
+case 3:cout << "Ecuacion Cuadratica\n";
+cout << "Ingrese a: ";
+cin >> a;
+cout << "Ingrese b: ";
+cin >> b;
+cout << "Ingrese c: ";
+cin >> c;
+y = pow(b, 2) - 4 * a*c;
+if (y > 0)
+{
+x1 = -b + sqrt(y) / (2 * a);
+x2 = -b - sqrt(y) / (2 * a);
+cout << "x1= " << x1 << endl;
+cout << "x2= " << x2;
+}
+else
+cout << "No es un numero real.";
+_getch();
+break;
+case 4:cout << "Valor Absoluto\n";
+cout << "Ingrese su numero: ";
+cin >> n;
+if (n < 0)
+n = n*-1;
+cout << "El valor absoluto es: " << n;
+_getch();
+break;
+case 5:cout << "Area de una Circunferencia\n";
+cout << "Ingrese el radio de la circunferencia: ";
+cin >> r;
+pi = 3.1415;
+area = pi*pow(r, 2);
+cout << "El area de la circunferencia es: " << area;
+_getch();
+break;
+case 0:cout << "Salir\n";
+_getch();
+break;
+default: cout << "ERROR\n";
+_getch();
+}
+system("cls");
+} while (opcion != 0);
+getch();
+}
+  
