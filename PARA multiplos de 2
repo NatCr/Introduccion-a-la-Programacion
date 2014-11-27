@@ -1,0 +1,18 @@
+// PARA multiplos de 2.cpp : Defines the entry point for the console application.
+//ANEXO:https://gist.github.com/NatCr/b81881ecabed17760b37
+ 
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+ 
+using namespace std;
+ 
+void main()
+{
+int N,I;
+cout<<"Ingrese N:\n";
+cin>>N;
+for(I=1;I<=N;I=I*2)
+cout<<I<<"\n";
+getch();
+} 
